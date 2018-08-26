@@ -1,0 +1,295 @@
+// IMPORTS
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,200,700')
+
+@import reset
+    
+// VARIABLES
+
+$ratio: 24 / 18
+
+$size-font-p: 18px   
+$size-font-h1: $size-font-p
+$size-font-h2: $size-font-p*$ratio
+$size-font-h3: $size-font-p
+$size-font-h4: $size-font-p
+
+$baseline: $size-font-h2
+
+
+// MIXINS
+
+=uppercase
+    text-transform: uppercase
+
+=circle
+    display: inline-block
+    text-align: center
+    vertical-align: bottom
+    color: white
+    content: ""
+    height: 24px
+    width: 24px
+    border-radius: 24px
+    background: black
+    margin-left: 16px
+    pointer-events: auto
+
+// GENERAL
+
+body
+    font-family: "Roboto", sans-serif
+    line-height: $baseline
+    vertical-align: text-bottom
+
+p
+    text-transform: inherit
+    font-size: $size-font-p
+
+h1
+    font-size: $size-font-h1
+    +uppercase
+
+h2
+    font-size: $size-font-h2
+    +uppercase
+
+h3
+    font-size: $size-font-h3
+    +uppercase
+    font-weight: 200
+
+h4
+    font-size: $size-font-h4
+    font-weight: 200
+    +uppercase
+
+a
+    color: black
+    display: inline-block
+    //background: red
+
+.grid
+
+section
+    margin-left: 2%
+    margin-right: 2%
+
+
+//NAVMOBILE
+
+.topbar
+    position: fixed
+    top: 0
+    width: 100%
+    background: rgba(255,255,255,0.9)
+    z-index: 1
+    padding-left: 2%
+    padding-right: 2%
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+.logo
+    //text-align: center
+    margin-top: $baseline / 2
+    margin-bottom: $baseline / 2
+
+    
+
+nav
+    +uppercase
+    .nav-mobile
+        display: flex
+        justify-content: space-between
+        max-width: 480px
+        //background: yellow
+        li
+            margin-bottom: $baseline / 2
+            //background: hotpink
+
+        
+
+.werke
+    font-size: 14px
+    display: flex
+    flex-direction: column
+    position: absolute
+    padding-left: 8px
+    padding-right: 8px
+    margin-top: $baseline / 2
+    background: rgba(255,255,255,0.9)
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+
+    a
+        
+    li
+        margin-bottom: $baseline / 2
+        line-height: $baseline / 2
+    
+    
+
+//MAIN
+
+section
+    margin-top: $baseline*6
+
+#jetzt
+    h2
+        &::after
+            +circle
+            content: "i"
+            text-transform: lowercase
+            font-family: serif
+            cursor: pointer
+    h4
+        margin-bottom: $baseline / 4
+
+.content
+    margin-bottom: $baseline*2
+    max-width: 960px
+
+.title 
+
+.tooltip
+    margin-top: $baseline / 2
+    margin-bottom: $baseline / 2
+    //color: grey
+    display: inline-block
+    padding: 8px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+
+.artists
+    margin-top: $baseline / 2
+    font-size: 14px
+    line-height: $baseline
+    color: grey
+
+.text
+    margin-left: 2%
+    margin-top: $baseline
+    max-width: 960px
+    p
+        border-left: 1px solid lightgrey
+        padding-left: 2%
+    .add-p
+        border: none
+        text-align: right
+        margin-top: $baseline / 2
+        color: grey
+
+.add
+    display: flex
+    margin-top: $baseline
+.add-dates
+    margin-right: 5%
+    font-weight: 600
+
+//VITA
+
+#vita
+    .fabi
+        width: 50%
+        margin-bottom: 2%
+.cv
+    +uppercase
+    li
+        font-weight: 600
+        &::after
+            +circle
+            content: ">"
+            cursor: pointer
+    margin-bottom: $baseline*2
+
+.vita-content
+    h4
+    .title
+    h2
+        pointer-events: none
+        cursor: pointer  
+        &::after
+            +circle
+            content: "+"
+    .artists
+
+.gallery
+    margin-top: $baseline
+    grid-column: 2
+    grid-row: 2
+    img
+        margin-right: 8px
+        margin-bottom: 8px
+
+.hidden
+    display: none
+
+@media screen and (min-width:960px)
+
+    .grid
+        display: grid
+        grid-template-columns: 50px 260px 1fr 1fr 50px
+    .topbar
+        position: static
+        width: auto
+        box-shadow: none
+        grid-column: 2
+        margin-top: $baseline*3
+        display: block
+    .logo
+        margin-top: $baseline
+        margin-bottom: $baseline
+        position: fixed
+    nav
+        position: fixed
+        //background: red
+        display: inline-block
+        margin-top: $baseline*3
+        .nav-mobile
+            display: block
+    .werke
+        position: static
+        background: none
+        box-shadow: none
+    section
+        grid-column: 3 / 5
+    .content
+        display: grid
+        grid-template-columns: 155px 1fr
+    .title
+        grid-column: 1 / 3
+    .artists
+        grid-column: 1
+    .text
+        grid-column: 2
+    .add
+        grid-column: 2
+
+    .vita-content
+        grid-template-columns: 250px 1fr
+        grid-template-rows: max-content 1fr
+        h4
+            grid-row: 1
+            grid-column: 1
+        .title
+            grid-column: 2 / 4
+            grid-row: 1 / 4
+        .artists
+            //margin-top: -$baseline / 2
+            grid-column: 1
+            //background: red
+        
+@media screen and (min-width: 1366px)
+    .grid
+        grid-template-columns: 1fr 280px 2fr 2fr 2fr
+    .topbar
+        grid-column: 2
+
+
+
+    
+
+
+
+
+
+
