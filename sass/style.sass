@@ -69,6 +69,18 @@ a
     display: inline-block
     //background: red
 
+img
+    max-width: 100%
+
+.mail
+    //text-transform: lowercase
+    font-weight: 600
+    font-size: 14px
+    color: white
+    border: 1px solid
+    padding: 1px 6px
+    background: black
+
 .grid
 
 section
@@ -83,7 +95,7 @@ section
     top: 0
     width: 100%
     background: rgba(255,255,255,0.9)
-    z-index: 1
+    z-index: 5
     padding-left: 2%
     padding-right: 2%
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
@@ -109,23 +121,36 @@ nav
         
 
 .werke
+    max-width: 480px
     font-size: 14px
     display: flex
-    flex-direction: column
+    //flex-direction: column
+    justify-content: space-between
     position: absolute
-    padding-left: 8px
-    padding-right: 8px
-    margin-top: $baseline / 2
+    //padding: 8px
+    margin-top: 44px
+    padding-top: 16px
     background: rgba(255,255,255,0.9)
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    //box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    flex-wrap: wrap
+
 
 
     a
         
     li
+        //background: red
+        margin-right: 16px
         margin-bottom: $baseline / 2
         line-height: $baseline / 2
-    
+        text-align: center
+
+.kontakt
+    font-size: 14px
+    line-height: 1
+    font-weight: 600
+    a
+        color: grey
     
 
 //MAIN
@@ -184,6 +209,17 @@ section
     margin-right: 5%
     font-weight: 600
 
+//WERKE
+.art
+    margin-bottom: $baseline*2
+
+.art-desc
+    li:first-child
+        +uppercase
+        font-weight: 600
+    li
+        line-height: 1.2
+
 //VITA
 
 #vita
@@ -240,9 +276,10 @@ section
         margin-top: $baseline*3
         display: block
     .logo
-        margin-top: $baseline
-        margin-bottom: $baseline
+        //margin-top: $baseline
+        //margin-bottom: $baseline*2
         position: fixed
+        width: 180px
     nav
         position: fixed
         //background: red
@@ -254,6 +291,12 @@ section
         position: static
         background: none
         box-shadow: none
+        flex-direction: column
+        margin-left: 8px
+        margin-top: 0
+        padding: 0
+        li
+            text-align: left
     section
         grid-column: 3 / 5
     .content
