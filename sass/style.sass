@@ -88,6 +88,8 @@ section
     margin-right: 2%
 
 
+
+
 //NAVMOBILE
 
 .topbar
@@ -117,6 +119,10 @@ nav
         li
             margin-bottom: $baseline / 2
             //background: hotpink
+
+.spacer
+    background: red
+    height: 400px
 
         
 
@@ -160,13 +166,16 @@ section
 
 #jetzt
     h2
-        &::after
-            +circle
-            content: "i"
-            text-transform: lowercase
-            font-family: 'Georgia', serif
-            font-size: 16px
-            cursor: pointer
+        svg
+            margin-left: 8px
+            //vertical-align: bottom
+        //&::after
+            // +circle
+            // content: "i"
+            // text-transform: lowercase
+            // font-family: 'Georgia', serif
+            // font-size: 16px
+            // cursor: pointer
     h4
         margin-bottom: $baseline / 4
 
@@ -230,7 +239,7 @@ section
     +uppercase
     li
         font-weight: 600
-        &::after
+        //&::after
             +circle
             content: ">"
             width: 18px
@@ -244,11 +253,13 @@ section
     h4
     .title
     h2
-        pointer-events: none
-        cursor: pointer  
-        &::after
-            +circle
-            content: "+"
+        //pointer-events: none
+        //cursor: pointer
+        //&::after
+            // +circle
+            // content: "+"
+        svg
+            margin-left: 8px
     .hidden-content
 
 

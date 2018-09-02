@@ -10,7 +10,20 @@ html(lang="en")
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js") 
     body
         .grid
-            include includes/nav.pug
+            .topbar
+                .logo
+                    h1 Fabian Widukind Penzkofer
+                nav
+                    ul.nav-mobile
+                        li
+                            a(href="index.html") <strong>Jetzt</strong>
+                        li 
+                            a(href="werke.html") Werke
+                        li
+                            a(href="vita.html") Vita
+                        li.kontakt
+                            a(href="impressum.html") Kontakt/<br>Impressum
+
                     
 
             section#jetzt
@@ -19,6 +32,7 @@ html(lang="en")
                     article.title
                         h4 28.09. - 20.10.2018
                         h2 Hi Definition
+                           include includes/circle.pug
                         .tooltip.hidden
                             p Vorstadtstraße 61-67
                             p 73614 Schorndorf
@@ -46,8 +60,9 @@ html(lang="en")
                     article.title
                         h4 15.09. - 07.10.2018
                         h2 Die Drei Freunde
+                            include includes/circle.pug
                         .tooltip.hidden
-                            p Vorstadtstraße 61-67
+                            p Hammerschlag 8
                             p 73614 Schorndorf
                         h3 Club Manufaktur
                     ul.artists

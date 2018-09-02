@@ -10,7 +10,31 @@ html(lang="en")
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js") 
     body
         .grid
-            include includes/nav.pug
+            .topbar
+                .logo
+                    h1 Fabian Widukind Penzkofer
+                nav
+                    ul.nav-mobile
+                        li
+                            a(href="index.html") Jetzt
+                        li 
+                            a(href="werke.html") <strong>Werke</strong>
+                        ul.werke
+                            li
+                                a(href="werke.html") <strong>Feed II</strong>
+                            li
+                                a(href="feed-1.html") Feed I
+                            li
+                                a(href="schwarz.html") Schwarz
+                            li
+                                a(href="mathe.html") Mathe
+                            li 
+                                a(href="orte-tret.html") Orte und Tretmühlen
+                        li
+                            a(href="vita.html") Vita
+                        li.kontakt
+                            a(href="impressum.html") Kontakt/<br>Impressum
+
             section#werke
                 .werke-content
 

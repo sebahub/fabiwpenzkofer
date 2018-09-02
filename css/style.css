@@ -81,6 +81,10 @@ nav {
     nav .nav-mobile li {
       margin-bottom: 12px; }
 
+.spacer {
+  background: red;
+  height: 400px; }
+
 .werke {
   max-width: 480px;
   font-size: 14px;
@@ -112,23 +116,8 @@ nav {
 section {
   margin-top: 144px; }
 
-#jetzt h2::after {
-  display: inline-block;
-  text-align: center;
-  vertical-align: bottom;
-  color: white;
-  content: "";
-  height: 24px;
-  width: 24px;
-  border-radius: 24px;
-  background: black;
-  margin-left: 16px;
-  pointer-events: auto;
-  content: "i";
-  text-transform: lowercase;
-  font-family: 'Georgia', serif;
-  font-size: 16px;
-  cursor: pointer; }
+#jetzt h2 svg {
+  margin-left: 8px; }
 
 #jetzt h4 {
   margin-bottom: 6px; }
@@ -193,41 +182,9 @@ section {
   margin-bottom: 48px; }
   .cv li {
     font-weight: 600; }
-    .cv li::after {
-      display: inline-block;
-      text-align: center;
-      vertical-align: bottom;
-      color: white;
-      content: "";
-      height: 24px;
-      width: 24px;
-      border-radius: 24px;
-      background: black;
-      margin-left: 16px;
-      pointer-events: auto;
-      content: ">";
-      width: 18px;
-      height: 18px;
-      line-height: 16px;
-      cursor: pointer;
-      vertical-align: middle; }
 
-.vita-content h2 {
-  pointer-events: none;
-  cursor: pointer; }
-  .vita-content h2::after {
-    display: inline-block;
-    text-align: center;
-    vertical-align: bottom;
-    color: white;
-    content: "";
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    background: black;
-    margin-left: 16px;
-    pointer-events: auto;
-    content: "+"; }
+.vita-content h2 svg {
+  margin-left: 8px; }
 
 .gallery {
   margin-top: 24px;

@@ -10,7 +10,20 @@ html(lang="en")
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js") 
     body
         .grid
-            include includes/nav.pug
+            .topbar
+                .logo
+                    h1 Fabian Widukind Penzkofer
+                nav
+                    ul.nav-mobile
+                        li
+                            a(href="index.html") Jetzt
+                        li 
+                            a(href="werke.html") Werke
+                        li
+                            a(href="vita.html") <strong>Vita</strong>
+                        li.kontakt
+                            a(href="impressum.html") Kontakt/<br>Impressum
+
                         
 
             section#vita
@@ -27,6 +40,7 @@ html(lang="en")
                     h4 15.09 - 07.10.2018
                     article.title
                         h2 placetobe
+                            include includes/circle.pug
                         h3 galerie hausgeburt | Stuttgart
                     ul.artists.hidden-content.hidden
                         li Eva Dittrich
@@ -43,6 +57,7 @@ html(lang="en")
                     h4 15.09 - 07.10.2018
                     article.title
                         h2 schatten im licht
+                            include includes/circle.pug
                         h3 Cafe De Ville, Schorndorf
                     ul.artists.hidden-content.hidden
                         li Eva Dittrich

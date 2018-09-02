@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     console.log('hello');
-
+    let navHeight = $('.werke').height();
+    console.log(navHeight);
 
     $('h2').click(function() {
         $(this).next('.tooltip').toggleClass('hidden');
@@ -10,7 +11,8 @@ $(document).ready(function(){
     
      });
 
+     $('section').css('margin-top', '+navHeight');
      
-
+   
 
 });
