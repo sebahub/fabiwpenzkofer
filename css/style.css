@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,200,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,200,700,800");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 * {
   margin: 0;
   padding: 0;
@@ -34,12 +35,19 @@ h4 {
   font-weight: 200;
   text-transform: uppercase; }
 
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 18px; }
+
 a {
   color: black;
   display: inline-block; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  max-height: 900px; }
 
 .mail {
   font-weight: 600;
@@ -86,7 +94,6 @@ nav {
   height: 400px; }
 
 .werke {
-  max-width: 480px;
   font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,7 +102,7 @@ nav {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: absolute;
-  margin-top: 44px;
+  margin-top: 57px;
   padding-top: 16px;
   background: rgba(255, 255, 255, 0.9);
   -ms-flex-wrap: wrap;
@@ -109,15 +116,22 @@ nav {
 .kontakt {
   font-size: 14px;
   line-height: 1;
-  font-weight: 600; }
+  font-weight: 400; }
   .kontakt a {
     color: grey; }
 
 section {
-  margin-top: 144px; }
+  margin-top: 192px; }
 
-#jetzt h2 svg {
-  margin-left: 8px; }
+#jetzt svg {
+  margin-left: 8px;
+  display: inline;
+  vertical-align: -10%; }
+
+#jetzt h2 {
+  display: inline-block; }
+  #jetzt h2 svg {
+    margin-left: 8px; }
 
 #jetzt h4 {
   margin-bottom: 6px; }
@@ -127,12 +141,8 @@ section {
   max-width: 960px; }
 
 .tooltip {
-  margin-top: 12px;
-  margin-bottom: 12px;
-  display: inline-block;
-  padding: 8px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  display: block;
+  padding: 8px; }
 
 .artists {
   margin-top: 12px;
@@ -173,6 +183,53 @@ section {
 .art-desc li {
   line-height: 1.2; }
 
+.orte-tret {
+  font-family: 'Playfair Display', serif; }
+  .orte-tret p {
+    margin-bottom: 24px; }
+
+audio {
+  display: block;
+  background: red; }
+
+.audioplayer {
+  display: block;
+  width: 100%;
+  height: 0;
+  background: red;
+  display: inline-block;
+  margin-bottom: 72px; }
+
+.pButton {
+  height: 60px;
+  width: 50px;
+  border: none;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none; }
+
+.play {
+  background: url("/icons/play.svg"); }
+
+.pause {
+  background: url("/icons/pause.svg"); }
+
+.timeline {
+  width: 0;
+  height: 0;
+  margin-top: 20px;
+  float: left;
+  background: rgba(0, 0, 0, 0.3); }
+
+.playhead {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  background: black; }
+
 #vita .fabi {
   width: 50%;
   margin-bottom: 2%; }
@@ -182,9 +239,19 @@ section {
   margin-bottom: 48px; }
   .cv li {
     font-weight: 600; }
+  .cv a {
+    font-weight: 400;
+    border-bottom: 1px solid;
+    line-height: 1; }
 
-.vita-content h2 svg {
-  margin-left: 8px; }
+.vita-content h2 {
+  display: inline; }
+
+.vita-content svg {
+  margin-left: 8px;
+  display: inline;
+  vertical-align: -10%;
+  width: 22px; }
 
 .gallery {
   margin-top: 24px;
@@ -196,6 +263,30 @@ section {
 
 .hidden {
   display: none; }
+
+.font-small {
+  text-transform: lowercase; }
+
+video {
+  width: 100%;
+  grid-column: 1 / 4; }
+
+.impressum-content article {
+  margin-top: 48px;
+  grid-column: 1 / 4; }
+  .impressum-content article h5 {
+    font-size: 16px;
+    margin-bottom: 24px; }
+  .impressum-content article h6 {
+    font-size: 16px; }
+  .impressum-content article p {
+    font-size: 14px;
+    margin-bottom: 24px; }
+
+.kontaktdaten {
+  grid-column: 1 / 4; }
+  .kontaktdaten a {
+    border-bottom: 1px solid; }
 
 @media screen and (min-width: 960px) {
   .grid {
@@ -233,7 +324,8 @@ section {
     .werke li {
       text-align: left; }
   section {
-    grid-column: 3 / 5; }
+    grid-column: 3 / 5;
+    margin-top: 144px; }
   .content {
     display: grid;
     grid-template-columns: 155px 1fr; }
@@ -251,7 +343,9 @@ section {
       grid-column: 2; }
     .vita-content h4 {
       grid-row: 1;
-      grid-column: 1; } }
+      grid-column: 1; }
+  .kontakt {
+    margin-top: 31.2px; } }
 
 @media screen and (min-width: 1366px) {
   .grid {
