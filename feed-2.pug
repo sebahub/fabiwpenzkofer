@@ -1,73 +1,106 @@
 <!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Fabian Widukind Penzkofer
-        link(rel="stylesheet", href="css/style.css", type="text/css")
-        //link(rel="stylesheet", href="//basehold.it/24")
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js") 
-    body
-        .grid
-            .topbar
-                .logo
-                    h1 Fabian Widukind Penzkofer
-                nav
-                    ul.nav-mobile
-                        li
-                            a(href="index.html") Jetzt
-                        li 
-                            a(href="feed-1.html") <strong>Werke</strong>
-                        ul.werke
-                            li
-                                a(href="feed-1.html") Feed I
-                            li
-                                a(href="feed-2.html") 
-                                <strong>Feed II</strong>
-                            li
-                                a(href="schwarz.html") Schwarz
-                            li
-                                a(href="mathe.html") ℑ⊆[IMG_0010;IMG_9990]
-                            li 
-                                a(href="orte-tret.html") Orte und Tretmühlen
-                            li 
-                                a(href="schatten.html") Schatten im Licht
-                        li
-                            a(href="vita.html") Vita
-                        li.kontakt
-                            a(href="impressum.html") Kontakt <br>Datenschutz<br>Impressum
+html(lang="de")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Fabian Widukind Penzkofer
+    link(rel="stylesheet", href="css/style.css?v=1.0", type="text/css")
+    //link(rel="stylesheet", href="//basehold.it/24")
+    meta(http-equiv="cache-control" content="max-age=60")
+  body
+    .grid
+      .topbar
+        .logo
+          h1 Fabian Widukind Penzkofer
+        nav
+          ul.nav-desktop
+            li
+              a(href="index.html") Jetzt
+            li 
+              a(href="feed-1.html") <strong>Werke</strong>
+            ul.werke.werke-desktop
+              li
+                a(href="feed-1.html") Feed I
+              li
+                a(href="feed-2.html") <strong>Feed II</strong>
+              li
+                a(href="schwarz.html") Schwarz
+              li
+                a(href="mathe.html") ℑ⊆[IMG_0010;IMG_9990]
+              li 
+                a(href="orte-tret.html") Orte und Tretmühlen
+              li 
+                a(href="schatten.html") Schatten im Licht
+            li
+              a(href="vita.html") Vita
+            li.kontakt
+              a(href="impressum.html") Kontakt <br>Datenschutz<br>Impressum
+            
+        .burger
+          .bun
+          .bun
+          .bun
 
-            section#werke
-                .werke-content
+        ul.nav-mobile
+          li
+            a(href="index.html") Jetzt
+          li.dropdown
+            a <strong>Werke</strong>
+              img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Breezeicons-actions-22-go-next.svg/800px-Breezeicons-actions-22-go-next.svg.png", alt="")
+          li
+            a(href="vita.html") Vita
+          li.kontakt
+            a(href="impressum.html") Kontakt
+          li.kontakt
+            a(href="impressum.html") Datenschutz
+          li.kontakt
+            a(href="impressum.html") Impressum
+        ul.nav-mobile-two
+          li.backarrow
+            img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Breeze-system-log-out-16.svg/800px-Breeze-system-log-out-16.svg.png", alt="")
+          li.nav-mobile-two-item
+            a(href="feed-1.html") Feed I
+          li.nav-mobile-two-item
+            a(href="feed-2.html") <strong>Feed II</strong>
+          li.nav-mobile-two-item
+            a(href="schwarz.html") Schwarz
+          li.nav-mobile-two-item
+            a(href="mathe.html") ℑ⊆[IMG_0010;IMG_9990]
+          li.nav-mobile-two-item
+            a(href="orte-tret.html") Orte und Tretmühlen
+          li.nav-mobile-two-item
+            a(href="schatten.html") Schatten im Licht
+      section#werke
+        .werke-content
 
-                    article.art
-                        img(src="pics/feed2/F1.jpg")
-                        ul.art-desc
-                            li f1
-                            li Digitaldruck auf Backprintfolie
-                            li 21x21cm
-                            li 2018
-                    article.art
-                        img(src="pics/feed2/F2.jpg")
-                        ul.art-desc
-                            li f2
-                            li Digitaldruck auf Backprintfolie
-                            li 21x21cm
-                            li 2018
-                    article.art
-                        img(src="pics/feed2/F3.jpg")
-                        ul.art-desc
-                            li f3
-                            li Digitaldruck auf Backprintfolie
-                            li 21x21cm
-                            li 2018
-                    article.art
-                        img(src="pics/feed2/F5.jpg")
-                        ul.art-desc
-                            li f5
-                            li Digitaldruck auf Backprintfolie
-                            li 21x21cm
-                            li 2018
+          article.art
+            img(src="pics/feed2/F1.jpg")
+            ul.art-desc
+              li f1
+              li Digitaldruck auf Backprintfolie
+              li 21x21cm
+              li 2018
+          article.art
+            img(src="pics/feed2/F2.jpg")
+            ul.art-desc
+              li f2
+              li Digitaldruck auf Backprintfolie
+              li 21x21cm
+              li 2018
+          article.art
+            img(src="pics/feed2/F3.jpg")
+            ul.art-desc
+              li f3
+              li Digitaldruck auf Backprintfolie
+              li 21x21cm
+              li 2018
+          article.art
+            img(src="pics/feed2/F5.jpg")
+            ul.art-desc
+              li f5
+              li Digitaldruck auf Backprintfolie
+              li 21x21cm
+              li 2018
 
-        script(src='js/script.js')
+    script(src='js/script-dist.js')

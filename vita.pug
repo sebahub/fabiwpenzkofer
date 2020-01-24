@@ -1,164 +1,363 @@
 <!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Fabian Widukind Penzkofer
-        link(rel="stylesheet", href="css/style.css", type="text/css")
-        //link(rel="stylesheet", href="//basehold.it/24")
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js") 
-    body
-        .grid
-            .topbar
-                .logo
-                    h1 Fabian Widukind Penzkofer
-                nav
-                    ul.nav-mobile
-                        li
-                            a(href="index.html") Jetzt
-                        li 
-                            a(href="feed-1.html") Werke
-                        li
-                            a(href="vita.html") <strong>Vita</strong>
-                        li.kontakt
-                            a(href="impressum.html") Kontakt <br>Datenschutz<br>Impressum
-                        
+html(lang="de")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Fabian Widukind Penzkofer
+    link(rel="stylesheet", href="css/style.css?v=1.1", type="text/css")
+    //link(rel="stylesheet", href="//basehold.it/24")
+    meta(http-equiv="cache-control" content="max-age=60")
+  body
+    .grid
+      .topbar
+        .logo
+          h1 Fabian Widukind Penzkofer
+        nav
+          ul.nav-desktop
+            li
+              a(href="index.html") Jetzt
+            li 
+              a(href="feed-1.html") Werke
+            li
+              a(href="vita.html") <strong>Vita</strong>
+            li.kontakt
+              a(href="impressum.html") Kontakt <br>Datenschutz<br>Impressum
 
-            section#vita
-                img.fabi(src="pics/fabi.jpg")
-                ul.cv
-                    
-                    li 
-                        a(href="http://www.abk-stuttgart.de/" target="_blank") Staatliche akademie der bildenden künste Stuttgart
-                    li Klasse Professor 
-                        a(href="http://www.retoboller.com" target="_blank") reto boller
-                    li klasse professor 
-                        a(href="http://www.andreasopiolka.de/" target="_blank") andreas opiolka </a> A.m. cindy cordt
-                    li Miterfinder von 
-                        a(href="rosanna.html") ROSANNAWIDUKIND
-                    li Mitbegründer von 
-                        a(href="https://www.youtube.com/watch?v=sQmdjocL0J4" target="_blank") Bohnemann und Smartbeats
-                    li Teil von 
-                        a(href="https://www.tristanreverb.com/") Tristan Reverb
+        
+        .burger
+          .bun
+          .bun
+          .bun
 
-                .content.vita-content
-                    h4 23.06 - 22.07.2018
-                    article.title
-                        h2 Kurze Szenen | Heile Welt
-                        include includes/circle.pug
-                        h3 Neuer Kunstverein Regensburg
-                    ul.artists.hidden-content.hidden
-                        li Büro für verschiebbare Haltungen
-                        li Gast: Fabian W. Penzkofer
-                    .gallery.hidden-content.hidden
-                            img(src="pics/vita/heilewelt/IMG_5275.jpg")
+        ul.nav-mobile
+          li
+            a(href="index.html") Jetzt
+          li.dropdown
+            a Werke
+              img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Breezeicons-actions-22-go-next.svg/800px-Breezeicons-actions-22-go-next.svg.png", alt="")
+          li
+            a(href="vita.html") <strong>Vita</strong>
+          li.kontakt
+            a(href="impressum.html") Kontakt
+          li.kontakt
+            a(href="impressum.html") Datenschutz
+          li.kontakt
+            a(href="impressum.html") Impressum
+        ul.nav-mobile-two
+          li.backarrow
+            img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Breeze-system-log-out-16.svg/800px-Breeze-system-log-out-16.svg.png", alt="")
+          li.nav-mobile-two-item
+            a(href="feed-1.html") Feed I
+          li.nav-mobile-two-item
+            a(href="feed-2.html") Feed II
+          li.nav-mobile-two-item
+            a(href="schwarz.html") Schwarz
+          li.nav-mobile-two-item
+            a(href="mathe.html") ℑ⊆[IMG_0010;IMG_9990]
+          li.nav-mobile-two-item
+            a(href="orte-tret.html") Orte und Tretmühlen
+          li.nav-mobile-two-item
+            a(href="schatten.html") Schatten im Licht
+            
 
-                .content.vita-content
-                    h4 11.05 - 13.05.2018
-                    article.title
-                        h2.font-small about:blank
-                        include includes/circle.pug
-                        h3 LAF | Pforzheim
-                    ul.artists.hidden-content.hidden
-                        li Garance Arcandias
-                        li Julian Bogenfeld
-                        li Lennard Cleeman
-                        li Friedrich Hensen
-                        li Theo Dietz
-                        li Janis Eckardt
-                        li Moritz Finkbeiner
-                        li Jan Hottmann
-                        li Rebecca Ogle
-                        li Caroline D'Orville
-                        li Ivan Syrov
-                        li Fabian W. Penzkofer
-                        li Jasmin Schädler
-                        li Tzusoo
-                        li Helen Weber
-                    .gallery.hidden-content.hidden
-                            img(src="pics/schwarz/01.jpg")
-                            img(src="pics/schwarz/02.jpg")
-                            img(src="pics/schwarz/03.jpg")
-                            img(src="pics/schwarz/04.jpg")
+      section#vita
+        img.fabi(src="pics/fabi.jpg")
+        ul.cv
+          
+          li 
+            a.ak-stuttgart(href="http://www.abk-stuttgart.de/" target="_blank") Staatliche akademie der bildenden künste Stuttgart
+          li Klasse Professor 
+            a(href="http://www.retoboller.com" target="_blank") reto boller
+          li klasse professor 
+            a(href="http://www.andreasopiolka.de/" target="_blank") andreas opiolka </a> A.m. cindy cordt
+          li Miterfinder von 
+            a(href="rosanna.html") ROSANNAWIDUKIND
+          li Mitbegründer von 
+            a(href="https://www.youtube.com/watch?v=sQmdjocL0J4" target="_blank") Bohnemann und Smartbeats
+          li Teil von 
+            a(href="https://www.tristanreverb.com" target="_blank") Tristan Reverb
 
-                .content.vita-content
-                    h4 14.04.2018
-                    article.title
-                        h2 Innenhoftherapie
-                        include includes/circle.pug
-                        h3 Forum 3 | Stuttgart
-                    ul.artists.hidden-content.hidden
-                        li Theo Dietz
-                        li Theresa Dorn
-                        li Wera Gmeiner
-                        li Friedrich Hensen
-                        li Jan Hottmann
-                        li Miriam Krämer
-                        li Christoph Kuttner
-                        li Maria Leisner
-                        li Maximilian Lutz
-                        li Theresa Müller
-                        li Ivan Syrov
-                        li ROSANNAWIDUKIND
-                    .gallery.hidden-content.hidden
-                            img(src="pics/vita/rosanna/ROSAgroß.jpg")
-                            img(src="pics/vita/rosanna/rosannawidukindimwind.jpg")
+        .content.vita-content
+          h4 23.08. - 26.08.2019
+          article.title
+            
+            h2 ART OKUPACIJA
+            include includes/circle.pug
+            h3 Sombor (SRB)
+          ul.artists.hidden-content.hidden
+            li Symposium
+          .gallery.hidden-content.hidden
+            img(src="pics/2019_09/SOMBOR 1.jpg", alt="")
+            img(src="pics/2019_09/SOMBOR 2.jpg", alt="")
+            img(src="pics/2019_09/SOMBOR 3.jpg", alt="")
+        .content.vita-content
+          h4 28.07.2019
+          article.title
+            
+            h2 OFF THE GRID
+            include includes/circle.pug
+            h3 Merkel Park, Esslingen
+          ul.artists.hidden-content.hidden
+            li Schwäbischer Online-Albverein
+            li Helen Weber
+            li Fabian W. Penzkofer
+            li Kai Fischer
+          .gallery.hidden-content.hidden
+            img(src="pics/2019_09/MERKEL !1.jpg", alt="")
+            img(src="pics/2019_09/MERKEL !2.jpg", alt="")
+            img(src="pics/2019_09/MERKEL !3.jpg", alt="")
+            img(src="pics/2019_09/MERKEL !4.jpg", alt="")
+            img(src="pics/2019_09/MERKEL !5.jpg", alt="")
+            img(src="pics/2019_09/MERKEL !6.jpg", alt="")
+            
+        .content.vita-content
+          h4 13.07.2019
+          article.title
+            
+            h2 KUNST IM HINTERHOF
+            include includes/circle.pug
+            h3 Westallee, Stuttgart
+          ul.artists.hidden-content.hidden
+            li Gruppenausstellung
+          .gallery.hidden-content.hidden
+            img(src="pics/2019_09/HINTERHOF1.jpg", alt="")
+            img(src="pics/2019_09/hinterhof2.jpg", alt="")
+        .content.vita-content
+          h4 07.06.2019
+          article.title
+            
+            h2 River in transition
+            include includes/circle.pug
+            h3 Kultura Stanica Svilara | Novi Sad (SRB)
+          ul.artists.hidden-content.hidden
+            li Gruppenausstellung
+          .gallery.hidden-content.hidden
+            img(src="pics/River_06_07/NOV 3.jpg", alt="")
+            img(src="pics/River_06_07/NOV 2.jpg", alt="")
+            img(src="pics/River_06_07/HID 1.jpg", alt="")
 
-                .content.vita-content
-                    h4 18.02 - 01.04.2017
-                    article.title
-                        h2 placetobe
-                        include includes/circle.pug
-                        h3 galerie hausgeburt | Stuttgart
-                    ul.artists.hidden-content.hidden
-                        li Friedrich Hensen
-                        li Tobias Hensen
-                        li Fabian W. Penzkofer
-                    .gallery.hidden-content.hidden
-                            img(src="pics/orte/OUTdoku1.jpg")
-                            img(src="pics/orte/OUTdoku2.jpg")
-                            img(src="pics/orte/OUTdoku3.jpg")
-                            
-                .content.vita-content
-                    h4 19.09 - 30.10.2015
-                    article.title
-                        h2 schatten im licht
-                        include includes/circle.pug
-                        h3 Cafe De Ville | Schorndorf
-                    ul.artists.hidden-content.hidden
-                        li Fabian W. Penzkofer
+        .content.vita-content
+          h4 18.05.2019
+          article.title
+            
+            h2 Moonwalk
+            include includes/circle.pug
+            h3 HuM Base | Stuttgart
+          ul.artists.hidden-content.hidden
+            li Tim Hasselman
+            li Paul Abbrecht
+            li Marius Schwingl
+            li Fabian W. Penzkofer <br>
+            li <br>
+            li Screening | Performance | Installation
+            li in der Ausstellung <b>"Humus"</b>
+          .gallery.hidden-content.hidden
+            img(src="pics/Moonwalk/59461339_2471359789565087_7788063119357001014_n.jpg", alt="")
+            img(src="pics/Moonwalk/DSC2097-1024x683.jpg", alt="")
+            img(src="pics/Moonwalk/DSC2099-1024x683.jpg", alt="")
+            img(src="pics/Moonwalk/DSC2135-1024x683.jpg", alt="")
+            img(src="pics/Moonwalk/DSC2146-1024x683.jpg", alt="")
+            
 
-                .content.vita-content
-                    h4 12.06 - 13.06.2015
-                    article.title
-                        h2 Snag Festival
-                        include includes/circle.pug
-                        h3 Villa Merkel | Esslingen
-                    ul.artists.hidden-content.hidden
-                        li Sebastian Schaal
-                        li Marius Alsleben
-                        li Fabian W. Penzkofer
-                    .gallery.hidden-content.hidden
-                            img(src="pics/vita/snag/snag_01.jpg")
-                            img(src="pics/vita/snag/snag_02.jpg")
-                            img(src="pics/vita/snag/snag_03.jpg")
 
-                .content.vita-content
-                    h4 07.03.2015
-                    article.title
-                        h2 E41
-                        include includes/circle.pug
-                        h3 E41 | Tübingen
-                    ul.artists.hidden-content.hidden
-                        li Helen Weber
-                        li Alexandru Salariu
-                        li Fabian W. Penzkofer
+        .content.vita-content
+          h4 14.05.2019
+          article.title
+            
+            h2 River in transition
+            include includes/circle.pug
+            h3 International Elias Canetti Society | Ruse (BG)
+          ul.artists.hidden-content.hidden
+            li Gruppenausstellung
+          .gallery.hidden-content.hidden
+            img(src="pics/River_05_14/Empty.jpg", alt="")
+            img(src="pics/River_05_14/Empty 2.jpg", alt="")
+            img(src="pics/River_05_14/Full 1.jpg", alt="")
+            img(src="pics/River_05_14/Plag.jpg", alt="")
 
-                
-                
 
-                
-                
-                        
-        script(src='js/script.js')
+        .content.vita-content
+          h4 13.10. - 10.11.2018
+          article.title
+            
+            h2 Alle müssen es gesehen haben
+            include includes/circle.pug
+            h3 Galerie Hausgeburt | Stuttgart
+          ul.artists.hidden-content.hidden
+            li Clarissa Kassai
+            li Fabian W. Penzkofer
+          .gallery.hidden-content.hidden
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_01.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_03.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_04.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_05.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_06.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_07.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_08.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_09.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_10.jpg", alt="")
+            img(src="pics/vita/alle/alle_muessen_es_gesehen_haben_11.jpg", alt="")
+
+        .content.vita-content
+          h4 28.09. - 20.10.2018
+          article.title
+            
+            h2 [Hai: defiˈniʃən]
+            include includes/circle.pug
+            h3 Kunstverein Schorndorf
+          ul.artists.hidden-content.hidden
+            li Eva Dittrich
+            li Fabian W. Penzkofer
+            li Jasmin Schädler
+            li Ivan Syrov
+            li Helen Weber
+          .gallery.hidden-content.hidden
+            img(src="pics/vita/hidef/hi_definition_01.jpg", alt="")
+            img(src="pics/vita/hidef/hi_definition_02.jpg", alt="")
+            img(src="pics/vita/hidef/hi_definition_03.jpg", alt="")
+            img(src="pics/vita/hidef/hi_definition_04.jpg", alt="")
+            img(src="pics/vita/hidef/hi_definition_05.jpg", alt="")
+
+        .content.vita-content
+          h4 15.09. - 14.10.2018
+          article.title
+            
+            h2 Die Drei Freunde
+            include includes/circle.pug
+            h3 Club Manufaktur | Schorndorf
+          ul.artists.hidden-content.hidden
+            li ROSANNAWIDUKIND
+            li Friedrich Hensen
+          .gallery.hidden-content.hidden
+            img(src="pics/vita/diedrei/die_drei_freunde_01.jpg", alt="")
+            img(src="pics/vita/diedrei/die_drei_freunde_02.jpg", alt="")
+            img(src="pics/vita/diedrei/die_drei_freunde_03.jpg", alt="")
+            img(src="pics/vita/diedrei/die_drei_freunde_04.jpg", alt="")
+            img(src="pics/vita/diedrei/die_drei_freunde_05.jpg", alt="")
+            video.gallery-video(src="video/rosannawidukind_manufaktur.mp4" controls)
+    
+
+        .content.vita-content
+          h4 23.06 - 22.07.2018
+          article.title
+            h2 Kurze Szenen | Heile Welt
+            include includes/circle.pug
+            h3 Neuer Kunstverein Regensburg
+          ul.artists.hidden-content.hidden
+            li Büro für verschiebbare Haltungen
+            li Gast: Fabian W. Penzkofer
+          .gallery.hidden-content.hidden
+              img(src="pics/vita/heilewelt/IMG_5275.jpg")
+
+        
+           
+
+        .content.vita-content
+          h4 11.05 - 13.05.2018
+          article.title
+            h2.font-small about:blank
+            include includes/circle.pug
+            h3 LAF | Pforzheim
+          ul.artists.hidden-content.hidden
+            li Garance Arcandias
+            li Julian Bogenfeld
+            li Lennard Cleeman
+            li Friedrich Hensen
+            li Theo Dietz
+            li Janis Eckardt
+            li Moritz Finkbeiner
+            li Jan Hottmann
+            li Rebecca Ogle
+            li Caroline D'Orville
+            li Ivan Syrov
+            li Fabian W. Penzkofer
+            li Jasmin Schädler
+            li Tzusoo
+            li Helen Weber
+          .gallery.hidden-content.hidden
+              img(src="pics/schwarz/01.jpg")
+              img(src="pics/schwarz/02.jpg")
+              img(src="pics/schwarz/03.jpg")
+              img(src="pics/schwarz/04.jpg")
+
+        .content.vita-content
+          h4 14.04.2018
+          article.title
+            h2 Innenhoftherapie
+            include includes/circle.pug
+            h3 Forum 3 | Stuttgart
+          ul.artists.hidden-content.hidden
+            li Theo Dietz
+            li Theresa Dorn
+            li Wera Gmeiner
+            li Friedrich Hensen
+            li Jan Hottmann
+            li Miriam Krämer
+            li Christoph Kuttner
+            li Maria Leisner
+            li Maximilian Lutz
+            li Theresa Müller
+            li Ivan Syrov
+            li ROSANNAWIDUKIND
+          .gallery.hidden-content.hidden
+              img(src="pics/vita/rosanna/ROSAgroß.jpg")
+              img(src="pics/vita/rosanna/rosannawidukindimwind.jpg")
+
+        .content.vita-content
+          h4 18.02 - 01.04.2017
+          article.title
+            h2 placetobe
+            include includes/circle.pug
+            h3 galerie hausgeburt | Stuttgart
+          ul.artists.hidden-content.hidden
+            li Friedrich Hensen
+            li Tobias Hensen
+            li Fabian W. Penzkofer
+          .gallery.hidden-content.hidden
+              img(src="pics/orte/OUTdoku1.jpg")
+              img(src="pics/orte/OUTdoku2.jpg")
+              img(src="pics/orte/OUTdoku3.jpg")
+              
+        .content.vita-content
+          h4 19.09 - 30.10.2015
+          article.title
+            h2 schatten im licht
+            include includes/circle.pug
+            h3 Cafe De Ville | Schorndorf
+          ul.artists.hidden-content.hidden
+            li Fabian W. Penzkofer
+
+        .content.vita-content
+          h4 12.06 - 13.06.2015
+          article.title
+            h2 Snag Festival
+            include includes/circle.pug
+            h3 Villa Merkel | Esslingen
+          ul.artists.hidden-content.hidden
+            li Sebastian Schaal
+            li Marius Alsleben
+            li Fabian W. Penzkofer
+          .gallery.hidden-content.hidden
+              img(src="pics/vita/snag/snag_01.jpg")
+              img(src="pics/vita/snag/snag_02.jpg")
+              img(src="pics/vita/snag/snag_03.jpg")
+
+        .content.vita-content
+          h4 07.03.2015
+          article.title
+            h2 E41
+            include includes/circle.pug
+            h3 E41 | Tübingen
+          ul.artists.hidden-content.hidden
+            li Helen Weber
+            li Alexandru Salariu
+            li Fabian W. Penzkofer
+
+        
+        
+
+        
+        
+            
+    script(src='js/script-dist.js')

@@ -1,98 +1,129 @@
 <!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Fabian Widukind Penzkofer
-        link(rel="stylesheet", href="css/style.css", type="text/css")
-        //link(rel="stylesheet", href="//basehold.it/24")
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js") 
-    body
-        .grid
-            .topbar
-                .logo
-                    h1 Fabian Widukind Penzkofer
-                nav
-                    ul.nav-mobile
-                        li
-                            a(href="index.html") <strong>Jetzt</strong>
-                        li 
-                            a(href="feed-1.html") Werke
-                        li
-                            a(href="vita.html") Vita
-                        li.kontakt
-                            a(href="impressum.html") Kontakt <br>Datenschutz<br>Impressum
+html(lang="de")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Fabian Widukind Penzkofer
+    link(rel="stylesheet", href="css/style.css?v=1.1", type="text/css")
+    //link(rel="stylesheet", href="//basehold.it/24")
+    meta(name="description" content="Fabian Widukind Penzkofer, zumeist installativ arbeitend, wobei Inhalte zu großen Teilen im Umgang mit Raum, Klang und Text vermittelt werden, im Internet.")
+    meta(name="author" content="schaal.design")
+    meta(name="copyright" content="Fabian Widukind Penzkofer")
+    meta(name="robots" content="index")
+    meta(http-equiv="cache-control" content="max-age=60")
 
-                    
+  body
+    .grid
+      .topbar
+        .logo
+          h1 Fabian Widukind Penzkofer
+        nav
+          ul.nav-desktop
+            li
+              a(href="index.html") <strong>Jetzt</strong>
+            li 
+              a(href="feed-1.html") Werke
+            li
+              a(href="vita.html") Vita
+            li.kontakt
+              a(href="impressum.html") Kontakt <br>Datenschutz<br>Impressum
 
-            section#jetzt
+        
+        .burger
+          .bun
+          .bun
+          .bun
 
-                .content.jetzt-content
-                    article.title
-                        h4 28.09. - 20.10.2018
-                        h2 [Hai: defiˈniʃən]
-                        include includes/circle.pug
-                        .tooltip.hidden
-                            p Vorstadtstraße 61-67
-                            p 73614 Schorndorf
-                        h3 Kunstverein Schorndorf
-                    ul.artists
-                        li Eva Dittrich
-                        li Fabian w. Penzkofer
-                        li Jasmin Schädler
-                        li Ivan Syrov
-                        li Helen Weber
-                    article.text
-                        p After all, people wanted more than just text. This first became apparent after the 2000 Grammy Awards, where Jennifer Lopez wore a green dress that, well, caught the world’s attention. At the time, it was the most popular search query we had ever seen. But we had no surefire way of getting users exactly what they wanted: J­Lo wearing that dress. Google Image Search was born.
-                        p.add-p - Eric Schmidt, Executive Chairman of Google
-                    article.add
-                        ul.add-dates
-                            li Vernissage
-                            li Kaffee & Suchen
-                            li Performance & Finissage
-                        ul.add-dates-time
-                            li 28.09 | 19:00
-                            li 30.09 | 14:00
-                            li 20.10 | 19.00
+        ul.nav-mobile
+          li
+            a(href="index.html") <strong>Jetzt</strong>
+          li.dropdown
+            a Werke
+              img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Breezeicons-actions-22-go-next.svg/800px-Breezeicons-actions-22-go-next.svg.png", alt="")
+          li
+            a(href="vita.html") Vita
+          li.kontakt
+            a(href="impressum.html") Kontakt
+          li.kontakt
+            a(href="impressum.html") Datenschutz
+          li.kontakt
+            a(href="impressum.html") Impressum
+        ul.nav-mobile-two
+          li.backarrow
+            img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Breeze-system-log-out-16.svg/800px-Breeze-system-log-out-16.svg.png", alt="")
+          li.nav-mobile-two-item
+            a(href="feed-1.html") Feed I
+          li.nav-mobile-two-item
+            a(href="feed-2.html") Feed II
+          li.nav-mobile-two-item
+            a(href="schwarz.html") Schwarz
+          li.nav-mobile-two-item
+            a(href="mathe.html") ℑ⊆[IMG_0010;IMG_9990]
+          li.nav-mobile-two-item
+            a(href="orte-tret.html") Orte und Tretmühlen
+          li.nav-mobile-two-item
+            a(href="schatten.html") Schatten im Licht
 
-                .content.jetzt-content
-                    article.title
-                        h4 13.10. - 10.11.2018
-                        h2 Alle müssen es gesehen haben
-                        include includes/circle.pug
-                        .tooltip.hidden
-                            p Innerer Nordbahnhof 3
-                            p 70191 Stuttgart
-                        h3 Galerie Hausgeburt
-                    ul.artists
-                        li Clarissa Kassai
-                        li Fabian W. Penzkofer
-                    article.text
-                        p Beeindruckt von der Form, stülpt diese sich über beinahe jede mögliche weitere Wahrnehmung anderer Realität. Sekunden reichen und verzerren ein Bild in ihrer Kürze noch weiter. Was tun, wenn Schönheit plötzlich an einer hinzugestoßenen Wahrheit zu zerschellen droht? Ein Verhältnis zwischen Bewohner und Betrachter offengelegt, fragt welchen Teil wollen wir uns nehmen
-                    article.add
-                        ul.add-dates
-                            li Vernissage
-                            li Finissage
-                        ul.add-dates-time
-                            li 13.10 | 20:00
-                            li 10.11 | 20:00
+          
 
-                .content.jetzt-content
-                    article.title
-                        h4 15.09. - 07.10.2018
-                        h2 Die Drei Freunde
-                        include includes/circle.pug
-                        .tooltip.hidden
-                            p Hammerschlag 8
-                            p 73614 Schorndorf
-                        h3 Club Manufaktur
-                    ul.artists
-                        li ROSANNAWIDUKIND
-                        li Friedrich Hensen
-                    article.text
-                        p 3 in Schorndorf und drum herum aufgewachsene, 3, die ihre ersten künstlerischen Schritte auch dort getätigt haben. Diese 3 wollen nun sich und ihr tun mit Schorndorf zu teilen. Für alle 3 spielt Lyrik eine bedeutende Rolle in ihrem Schaffen, sowie Performance und das Arbeiten im öffentlichen Raum. Gehen wir von performativem aus, von musikalischem, malerischem, fotografischem und skulpturalem. Gehen wir davon aus, dass in der gemeinsamen Ausarbeitung eines Konzepts manches wieder verschwindet und manch anderes dafür hinzustößt und schon vervollständigt sich die Beschreibung eines gemeinsamen Projekts.
+      section#jetzt
+        //- audio#music(src="sounds/bald.mp3")
+        //- #audioplayer
+        //-     #audioplayer
+        //-         button#pButton.play
+        //-         #timeline
+        //-             #playhead
 
-                
+        .content.jetzt-content
+          article.title
+            h4 04.10. - 28.10.2019
+            h2 ICH MUSS MAL WIEDER ZUM FRISEUR
+            .tooltip
+              p Leonhardsplatz 28
+              p 70182 Stuttgart
+            h3 Kunstbezirk im Gustav-Siegle-Haus, Stuttgart
+          ul.artists
+            li Gruppenausstellung
+          article.text
+            p Es stellen aus: Prof. Andreas Opiolka, AM Cindy Cordt, Martina Buck, Clarissa Kassai, Fabian Widukind Penzkofer, Gaudenz Andrea Strauß, Moritz Zemsch, Katharina Maraike Becker, Simon Herkner, Hanna Burckardt und Janis Eckhardt.
+            //-p.add-p - Eric Schmidt, Executive Chairman of Google
+            article.add
+              ul.add-dates
+                li Laufzeit
+                li Öffnungszeiten
+                li Midissage
+                li Finissage
+              ul.add-dates-time
+                li 05.10. – 29.10.2019
+                li Di–Sa | 15–19 Uhr
+                li 18.10. | 19 Uhr (Künstlergespräche und Performance von Cindy Cordt)
+                li 28.10. | 19 Uhr (mit einer Aktion von Moritz Zemsch)
+        .content.jetzt-content
+          article.title
+            h4 24.09. - 2.10.2019
+            h2 River in transition
+            .tooltip
+              p Hindenburgstraße 29
+              p 71638 Ludwigsburg
+            h3 Kunstzentrum Karlskaserne, Ludwigsburg
+          ul.artists
+            li Gruppenausstellung
+          article.text
+            p Die Donau, mitsamt ihrer, von der Zeit verborgenen Erzählungen, Mythen, Liedern und Bräuchen als Thema einer Kunstausstellung. 22 Studierende aus den vier Anrainerstaaten Bulgarien, Serbien, Österreich und Deutschland waren auf Recherchereisenund schufen Arbeiten aus dem Erforschten. Ob in Gruppen, losen Verbänden oder auf sich alleine gestellt, entstanden daraus 12 Positionen, die von Zeichnung über Film, Video, Text und Performance, hin zu Installationen reichen.
+        .content.jetzt-content
+          article.title
+            h4 06.10. - 13.10.2019
+            h2 VARIOUS SMALL FIRES
+            .tooltip
+              p Eckartshaldenweg 7 + Mönchhaldenstraße 149
+              p 70191 Stuttgart
+            h3 HuMBase, Stuttgart + Villa Nix, Stuttgart
+          ul.artists
+            li Gruppenausstellung
+          article.text
+            img(src="pics/2019_09/_190909-plakat.jpg", alt="")
 
-        script(src='js/script.js')
+        
+
+    script(src='js/script-dist.js')

@@ -1,72 +1,106 @@
 <!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Fabian Widukind Penzkofer
-        link(rel="stylesheet", href="css/style.css", type="text/css")
-        //link(rel="stylesheet", href="//basehold.it/24")
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js") 
-    body
-        .grid
-            .topbar
-                .logo
-                    h1 Fabian Widukind Penzkofer
-                nav
-                    ul.nav-mobile
-                        li
-                            a(href="index.html") Jetzt
-                        li 
-                            a(href="feed-1.html") <strong>Werke</strong>
-                        ul.werke
-                            li
-                                a(href="feed-1.html") Feed I
-                            li
-                                a(href="feed-2.html") Feed II
-                            li
-                                a(href="schwarz.html") Schwarz
-                            li
-                                a(href="mathe.html") ℑ⊆[IMG_0010;IMG_9990]
-                            li 
-                                a(href="orte-tret.html") Orte und Tretmühlen
-                            li 
-                                a(href="schatten.html") <strong>Schatten im Licht</strong>
-                        li
-                            a(href="vita.html") Vita
-                        li.kontakt
-                            a(href="impressum.html") Kontakt <br>Datenschutz<br>Impressum
+html(lang="de")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Fabian Widukind Penzkofer
+    link(rel="stylesheet", href="css/style.css?v=1.1", type="text/css")
+    //link(rel="stylesheet", href="//basehold.it/24")
+  body
+    .grid
+      .topbar
+        .logo
+          h1 Fabian Widukind Penzkofer
+        nav
+          ul.nav-desktop
+            li
+              a(href="index.html") Jetzt
+            li 
+              a(href="feed-1.html") <strong>Werke</strong>
+            ul.werke.werke-desktop
+              li
+                a(href="feed-1.html") Feed I
+              li
+                a(href="feed-2.html") Feed II
+              li
+                a(href="schwarz.html") Schwarz
+              li
+                a(href="mathe.html") ℑ⊆[IMG_0010;IMG_9990]
+              li 
+                a(href="orte-tret.html") Orte und Tretmühlen
+              li 
+                a(href="schatten.html") <strong>Schatten im Licht</strong>
+            li
+              a(href="vita.html") Vita
+            li.kontakt
+              a(href="impressum.html") Kontakt <br>Datenschutz<br>Impressum
+            
+        .burger
+          .bun
+          .bun
+          .bun
 
-            section#werke
-                .werke-content
+        ul.nav-mobile
+          li
+            a(href="index.html") Jetzt
+          li.dropdown
+            a <strong>Werke</strong>
+              img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Breezeicons-actions-22-go-next.svg/800px-Breezeicons-actions-22-go-next.svg.png", alt="")
+          li
+            a(href="vita.html") Vita
+          li.kontakt
+            a(href="impressum.html") Kontakt
+          li.kontakt
+            a(href="impressum.html") Datenschutz
+          li.kontakt
+            a(href="impressum.html") Impressum
+        ul.nav-mobile-two
+          li.backarrow
+            img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Breeze-system-log-out-16.svg/800px-Breeze-system-log-out-16.svg.png", alt="")
+          li.nav-mobile-two-item
+            a(href="feed-1.html") Feed I
+          li.nav-mobile-two-item
+            a(href="feed-2.html") Feed II
+          li.nav-mobile-two-item
+            a(href="schwarz.html") Schwarz
+          li.nav-mobile-two-item
+            a(href="mathe.html") ℑ⊆[IMG_0010;IMG_9990]
+          li.nav-mobile-two-item
+            a(href="orte-tret.html") Orte und Tretmühlen
+          li.nav-mobile-two-item
+            a(href="schatten.html") <strong>Schatten im Licht</strong>
 
-                    article.art
-                        img(src="pics/schatten/Fabi_Penz_3++.jpg")
-                        ul.art-desc
-                            li (Ohne Titel)
-                            li Montage aus Glas, Folie, Acrylfarbe und Papier
-                            li 30x40cm
-                            li 2014
-                    article.art
-                        img(src="pics/schatten/Fabi_Penz_4++.jpg")
-                        ul.art-desc
-                            li (Ohne Titel)
-                            li Montage aus Glas, Folie, Acrylfarbe und Papier
-                            li 30x40cm
-                            li 2014
-                    article.art
-                        img(src="pics/schatten/Fabi_Penz_5++.jpg")
-                        ul.art-desc
-                            li (Ohne Titel)
-                            li Montage aus Glas, Folie, Acrylfarbe und Papier
-                            li 30x40cm
-                            li 2014
-                    article.art
-                        img(src="pics/schatten/Fabi_Penz_6++.jpg")
-                        ul.art-desc
-                            li (Ohne Titel)
-                            li Montage aus Glas, Folie, Acrylfarbe und Papier
-                            li 30x40cm
-                            li 2014
+      section#werke
+        .werke-content
 
-        script(src='js/script.js')
+          article.art
+            img(src="pics/schatten/Fabi_Penz_3++.jpg")
+            ul.art-desc
+              li (Ohne Titel)
+              li Montage aus Glas, Folie, Acrylfarbe und Papier
+              li 30x40cm
+              li 2014
+          article.art
+            img(src="pics/schatten/Fabi_Penz_4++.jpg")
+            ul.art-desc
+              li (Ohne Titel)
+              li Montage aus Glas, Folie, Acrylfarbe und Papier
+              li 30x40cm
+              li 2014
+          article.art
+            img(src="pics/schatten/Fabi_Penz_5++.jpg")
+            ul.art-desc
+              li (Ohne Titel)
+              li Montage aus Glas, Folie, Acrylfarbe und Papier
+              li 30x40cm
+              li 2014
+          article.art
+            img(src="pics/schatten/Fabi_Penz_6++.jpg")
+            ul.art-desc
+              li (Ohne Titel)
+              li Montage aus Glas, Folie, Acrylfarbe und Papier
+              li 30x40cm
+              li 2014
+
+    script(src='js/script-dist.js')

@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display')
 
 @import reset
-    
+  
 // VARIABLES
 
 $ratio: 24 / 18
@@ -22,425 +22,560 @@ $baseline: $size-font-h2
 // MIXINS
 
 =uppercase
-    text-transform: uppercase
+  text-transform: uppercase
 
 =circle
-    display: inline-block
-    text-align: center
-    vertical-align: bottom
-    color: white
-    content: ""
-    height: 24px
-    width: 24px
-    border-radius: 24px
-    background: black
-    margin-left: 16px
-    pointer-events: auto
+  display: inline-block
+  text-align: center
+  vertical-align: bottom
+  color: white
+  content: ""
+  height: 24px
+  width: 24px
+  border-radius: 24px
+  background: black
+  margin-left: 16px
+  pointer-events: auto
 
 // GENERAL
 
 body
-    font-family: "Roboto", sans-serif
-    line-height: $baseline
-    vertical-align: text-bottom
+  font-family: "Roboto", sans-serif
+  line-height: $baseline
+  vertical-align: text-bottom
+  overflow-x: hidden
 
 p
-    text-transform: inherit
-    font-size: $size-font-p
+  text-transform: inherit
+  font-size: $size-font-p
 
 h1
-    font-size: $size-font-h1
-    +uppercase
+  font-size: $size-font-h1
+  +uppercase
+  @media screen and (max-width: 960px)
+    padding-left: 2%
 
 h2
-    font-size: $size-font-h2
-    +uppercase
+  font-size: $size-font-h2
+  +uppercase
 
 h3
-    font-size: $size-font-h3
-    +uppercase
-    font-weight: 200
+  font-size: $size-font-h3
+  +uppercase
+  font-weight: 200
 
 h4
-    font-size: $size-font-h4
-    font-weight: 200
-    +uppercase
+  font-size: $size-font-h4
+  font-weight: 200
+  +uppercase
 
 h5
-    font-size: $size-font-h4
+  font-size: $size-font-h4
 h6
-    font-size: $size-font-p
+  font-size: $size-font-p
 
 a
-    color: black
-    display: inline-block
-    //background: red
+  color: black
+  display: inline-block
+  //background: red
 
 img
-    max-width: 100%
-    max-height: 900px
+  max-width: 100%
+  max-height: 900px
 
 .mail
-    //text-transform: lowercase
-    font-weight: 600
-    font-size: 14px
-    color: white
-    border: 1px solid
-    padding: 1px 6px
-    background: black
+  //text-transform: lowercase
+  font-weight: 600
+  font-size: 14px
+  color: white
+  border: 1px solid
+  padding: 1px 6px
+  background: black
 
 .grid
 
 section
-    margin-left: 2%
-    margin-right: 2%
+  margin-left: 2%
+  margin-right: 2%
 
+.circle
 
 
 
 //NAVMOBILE
 
 .topbar
-    position: fixed
-    top: 0
-    width: 100%
-    background: rgba(255,255,255,0.9)
-    z-index: 5
-    padding-left: 2%
-    padding-right: 2%
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  position: fixed
+  top: 0
+  width: 100%
+  background: rgba(255,255,255,0.9)
+  //z-index: 5
+  //padding-left: 2%
+  //padding-right: 2%
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 
 .logo
-    //text-align: center
-    margin-top: $baseline / 2
-    margin-bottom: $baseline / 2
+  //text-align: center
+  margin-top: $baseline / 2
+  margin-bottom: $baseline / 2
 
-    
+.fixed
+  overflow-y: hidden
+
+  
 
 nav
-    +uppercase
-    .nav-mobile
-        display: flex
-        justify-content: space-between
-        max-width: 480px
-        //background: yellow
-        li
-            margin-bottom: $baseline / 2
-            //background: hotpink
+  display: none
+  +uppercase
+  .nav-desktop
+    display: flex
+    justify-content: space-between
+    max-width: 480px
+    //background: yellow
+    li
+      margin-bottom: $baseline / 2
+      //background: hotpink
+
+.burger
+  position: fixed
+  right: 1em
+  top: 17px
+  cursor: pointer
+  .bun
+    border-radius: 10px
+    width: 15px
+    height: 3px
+    background: #2b2b2b
+    margin-bottom: 2px
+    &.animation
+      transition: all ease 0.2s
+      &:nth-child(1)
+        //transform: rotate(45deg)
+        transform: translateY(5px)
+      &:nth-child(2)
+        opacity: 0
+      &:nth-child(3)
+        //transform: rotate(-45deg)
+        transform: translateY(-5px)
+  @media screen and (min-width: 960px)
+    display: none
+
+.nav-mobile, .nav-mobile-two
+  position: absolute
+  transform: translateX(200%)
+  transition: transform ease 0.2s
+  background: rgba(255, 255, 255, 1)
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  top: 50px
+  width: 100%
+  height: 100vh
+  background: white
+  +uppercase
+  padding-left: 2%
+  padding-right: 2%
+  img
+    height: 1em
+  li
+    height: 3em
+    border-bottom: 1px solid #f1f1f1
+    line-height: 3em
+    a
+      width: 100%
+  &.active
+    display: block
+    transform: translateX(0)
+  .kontakt
+    font-size: 0.75em
+.nav-mobile
+  img
+    margin-left: 1em
+    position: relative
+    top: 2px
+.nav-mobile-two
+  width: 100%
+  position: absolute
+  transform: translateX(200%)
+  transition: transform ease 0.2s
+  //top: 0
+  background: white
+  z-index: 2
+  &.active
+    transform: translateX(0)
+  
+    
+.backarrow
+  cursor: pointer
+
+.dropdown
+  cursor: pointer
+
+
+
 
 .spacer
-    background: red
-    height: 400px
+  background: red
+  height: 400px
 
-        
+    
 
 .werke
-    //max-width: 480px
-    font-size: 14px
-    display: flex
-    //flex-direction: column
-    justify-content: space-between
-    position: absolute
-    //padding: 8px
-    margin-top: 57px
-    padding-top: 16px
-    background: rgba(255,255,255,0.9)
-    //box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
-    flex-wrap: wrap
+  //max-width: 480px
+  font-size: 14px
+  display: flex
+  //flex-direction: column
+  justify-content: space-between
+  position: absolute
+  //padding: 8px
+  margin-top: 57px
+  padding-top: 16px
+  background: rgba(255,255,255,0.9)
+  //box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  flex-wrap: wrap
 
 
-    a
-        
-    li
-        //background: red
-        margin-right: 16px
-        margin-bottom: $baseline / 2
-        line-height: $baseline / 2
-        text-align: center
+  a
+    
+  li
+    //background: red
+    margin-right: 16px
+    margin-bottom: $baseline / 2
+    line-height: $baseline / 2
+    text-align: center
+
+
 
 .kontakt
-    font-size: 14px
-    line-height: 1
-    font-weight: 400
-    //text-transform: none
-    a
-        color: grey
-    
+  font-size: 14px
+  line-height: 1
+  font-weight: 400
+  //text-transform: none
+  a
+    color: grey
+  
 
 //MAIN
 
 section
-    margin-top: $baseline*8
+  margin-top: $baseline*8
+  @media screen and (max-width: 960px)
+    margin-top: 5em
 
 #jetzt
+  svg
+    cursor: pointer
+    //float: left
+    margin-left: 8px
+    display: inline
+    vertical-align: -10%
+  h2
+    display: inline-block
     svg
-        //float: left
-        margin-left: 8px
-        display: inline
-        vertical-align: -10%
-    h2
-        display: inline-block
-        svg
-            //float: left
-            margin-left: 8px
-            //vertical-align: bottom
-        //&::after
-            // +circle
-            // content: "i"
-            // text-transform: lowercase
-            // font-family: 'Georgia', serif
-            // font-size: 16px
-            // cursor: pointer
-    h4
-        margin-bottom: $baseline / 4
+      //float: left
+      margin-left: 8px
+      //vertical-align: bottom
+    //&::after
+      // +circle
+      // content: "i"
+      // text-transform: lowercase
+      // font-family: 'Georgia', serif
+      // font-size: 16px
+      // cursor: pointer
+  h4
+    margin-bottom: $baseline / 4
 
 
 .content
-    margin-bottom: $baseline*2
-    max-width: 960px
+  margin-bottom: $baseline*2
+  max-width: 960px
 
 .tooltip
-    //margin-top: $baseline / 2
-    //margin-left: 16px
-    display: block
-    padding: 8px
-    //box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  //margin-top: $baseline / 2
+  //margin-left: 16px
+  display: block
+  padding: 8px
+  //box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 
 
 .artists
-    margin-top: $baseline / 2
-    font-size: 14px
-    line-height: $baseline
-    color: grey
+  margin-top: $baseline / 2
+  font-size: 14px
+  line-height: $baseline
+  color: grey
 
 .text
-    margin-left: 2%
+  margin-left: 2%
+  margin-top: $baseline / 2
+  max-width: 960px
+  p
+    border-left: 1px solid lightgrey
+    padding-left: 2%
+  .add-p
+    border: none
+    text-align: right
     margin-top: $baseline / 2
-    max-width: 960px
-    p
-        border-left: 1px solid lightgrey
-        padding-left: 2%
-    .add-p
-        border: none
-        text-align: right
-        margin-top: $baseline / 2
-        color: grey
+    color: grey
 
 .add
-    display: flex
-    margin-top: $baseline
+  display: flex
+  margin-top: $baseline
 .add-dates
-    margin-right: 5%
-    font-weight: 600
+  margin-right: 5%
+  font-weight: 600
 
 //WERKE
 .art
-    margin-bottom: $baseline*2
+  margin-bottom: $baseline*2
 
 .art-desc
-    li:first-child
-        +uppercase
-        font-weight: 600
-    li
-        line-height: 1.2
+  li:first-child
+    +uppercase
+    font-weight: 600
+  li
+    line-height: 1.2
 
 .orte-tret
-    font-family: 'Playfair Display', serif
-    p
-        margin-bottom: $baseline
+  font-family: 'Playfair Display', serif
+  p
+    margin-bottom: $baseline
 
-audio
-    display: block
-    background: red
+// audio
+//     display: block
+//     background: red
 
-.audioplayer
-    display: block
-    width: 100%
-    height: 0
-    //border: solid
-    background: red
-    display: inline-block
-    margin-bottom: $baseline*3
+#audioplayer
+  //display: block
+  width: 100%
+  height: 0
+  //border: solid
+  background: red
+  display: inline-block
+  margin-bottom: $baseline*3
 
-.pButton
-    height: 60px
-    width: 50px
-    border: none
-    background-size: 50% 50%
-    background-repeat: no-repeat
-    background-position: center
-    float: left
-    outline: none
+#pButton
+  height: 60px
+  width: 50px
+  border: none
+  background-size: 50% 50%
+  background-repeat: no-repeat
+  background-position: center
+  float: left
+  outline: none
 
 
 .play
-    background: url('/icons/play.svg')
+  background: url('../pics/play.svg')
 .pause
-    background: url('/icons/pause.svg')
+  background: url('../pics/pause.svg')
 
-.timeline
-    //display: none
-    width: 0
-    height: 0
-    margin-top: 20px
-    float: left
-    //border-radius: 15px
-    background: rgba(0,0,0,.3)
+#timeline
+  //display: none
+  width: 200px
+  height: 0
+  margin-top: 20px
+  float: left
+  //border-radius: 15px
+  background: rgba(0,0,0,.3)
 
-.playhead
-    width: 10px
-    height: 10px
-    border-radius: 50%
-    margin-top: 5px
-    background: rgba(0, 0, 0,1)
+#playhead
+  width: 10px
+  height: 10px
+  border-radius: 50%
+  margin-top: 5px
+  background: rgba(0, 0, 0,1)
 
 
 //VITA
 
 #vita
-    .fabi
-        width: 50%
-        margin-bottom: 2%
+  .fabi
+    width: 50%
+    margin-bottom: 2%
 .cv
-    +uppercase
-    li
-        font-weight: 600
-        //&::after
-            +circle
-            content: ">"
-            width: 18px
-            height: 18px
-            line-height: 16px
-            cursor: pointer
-            vertical-align: middle
-    margin-bottom: $baseline*2
-    a
-        font-weight: 400
-        border-bottom: 1px solid
-        line-height: 1
+  +uppercase
+  li
+    font-weight: 600
+    //&::after
+      +circle
+      content: ">"
+      width: 18px
+      height: 18px
+      line-height: 16px
+      cursor: pointer
+      vertical-align: middle
+  margin-bottom: $baseline*2
+  a
+    font-weight: 400
+    border-bottom: 1px solid
+    //text-decoration: underline
+    line-height: 1
+  .ak-stuttgart
+    display: inline
 
 
 .vita-content
-    h4
-    .title
-    h2
-        display: inline
-        //pointer-events: none
-        //cursor: pointer
-        //&::after
-            // +circle
-            // content: "+"
-    svg
-        //float: left
-        margin-left: 8px
-        display: inline
-        vertical-align: -10%
-        width: 22px
-    .hidden-content
+  h4
+  .title
+  h2
+    display: inline
+    //pointer-events: none
+    //cursor: pointer
+    //&::after
+      // +circle
+      // content: "+"
+  svg
+    cursor: pointer
+    margin-left: 8px
+    display: inline
+    vertical-align: -10%
+    width: 22px
+  .artists
+    
+  .hidden-content
 
 
 .gallery
-    margin-top: $baseline
-    grid-column: 2
-    grid-row: 2
-    img
-        margin-right: 8px
-        margin-bottom: 8px
+  margin-top: $baseline
+  grid-column: 2
+  grid-row: 2
+  img
+    margin-right: 8px
+    margin-bottom: 8px
+.gallery-video
+  margin-top: $baseline*2
 
 .hidden
-    display: none
+  display: none
 
 .font-small
-    text-transform: lowercase
+  text-transform: lowercase
 
 video
-    width: 100%
-    grid-column: 1 / 4
+  width: 100%
+  grid-column: 1 / 4
 
 //IMPRESSUM
 .impressum-content
-    article
-        margin-top: $baseline*2
-        grid-column: 1 / 4
-        h5
-            font-size: 16px
-            margin-bottom: $baseline
-        h6
-            font-size: 16px
-        p
-            font-size: 14px
-            margin-bottom: $baseline
-.kontaktdaten
+  article
+    margin-top: $baseline*2
     grid-column: 1 / 4
-    a
-        border-bottom: 1px solid
+    h5
+      font-size: 16px
+      margin-bottom: $baseline
+    h6
+      font-size: 16px
+    p
+      font-size: 14px
+      margin-bottom: $baseline
+.kontaktdaten
+  grid-column: 1 / 4
+  a
+    border-bottom: 1px solid
 
 @media screen and (min-width:960px)
 
-    .grid
-        display: grid
-        grid-template-columns: 50px 260px 1fr 1fr 50px
-    .topbar
-        position: static
-        width: auto
-        box-shadow: none
-        grid-column: 2
-        margin-top: $baseline*3
-        display: block
-    .logo
-        //margin-top: $baseline
-        //margin-bottom: $baseline*2
-        position: fixed
-        width: 180px
-    nav
-        position: fixed
-        //background: red
-        display: inline-block
-        margin-top: $baseline*3
-        .nav-mobile
-            display: block
-    .werke
-        position: static
-        background: none
-        box-shadow: none
-        flex-direction: column
-        margin-left: 8px
-        margin-top: 0
-        padding: 0
-        li
-            text-align: left
-    section
-        grid-column: 3 / 5
-        margin-top: $baseline*6
-    .content
-        display: grid
-        grid-template-columns: 155px 1fr
+  .grid
+    display: grid
+    grid-template-columns: 50px 260px 1fr 1fr 50px
+  .topbar
+    position: static
+    width: auto
+    box-shadow: none
+    grid-column: 2
+    margin-top: $baseline*3
+    display: block
+  .logo
+    //margin-top: $baseline
+    //margin-bottom: $baseline*2
+    position: fixed
+    width: 180px
+  nav
+    position: fixed
+    //background: red
+    display: inline-block
+    margin-top: $baseline*3
+    .nav-desktop
+      display: block
+  .werke
+    position: static
+    background: none
+    box-shadow: none
+    flex-direction: column
+    margin-left: 8px
+    margin-top: 0
+    padding: 0
+    li
+      text-align: left
+  section
+    grid-column: 3 / 5
+    margin-top: $baseline*6
+  .content
+    display: grid
+    grid-template-columns: 155px 1fr
+  .title
+    grid-column: 1 / 3
+  .text
+    grid-column: 2
+  .add
+    grid-column: 2
+
+  .vita-content
+    grid-template-columns: 250px 1fr
+    grid-template-rows: max-content 1fr
     .title
-        grid-column: 1 / 3
-    .text
-        grid-column: 2
-    .add
-        grid-column: 2
+      grid-column: 2
+    h4
+      grid-row: 1
+      grid-column: 1
+    .artists
+      margin-top: -$baseline
 
-    .vita-content
-        grid-template-columns: 250px 1fr
-        grid-template-rows: max-content 1fr
-        .title
-            grid-column: 2
-        h4
-            grid-row: 1
-            grid-column: 1
+  .kontakt
+    margin-top: $baseline*1.3
+  
 
-    .kontakt
-        margin-top: $baseline*1.3
-    
-
-            
+      
 @media screen and (min-width: 1366px)
-    .grid
-        grid-template-columns: 1fr 280px 2fr 2fr 2fr
-    .topbar
-        grid-column: 2
+  .grid
+    grid-template-columns: 1fr 280px 2fr 2fr 2fr
+  .topbar
+    grid-column: 2
+
+*
+  //outline: 1px solid red
+
+$circle: 1.25em
+$line_l: $circle * 0.6
+$line_h: $circle * 0.1
+
+.circle
+  width: $circle
+  height: $circle
+  background: black
+  border-radius: 100%
+  cursor: pointer
+  margin-left: 0.5em
+  display: inline-block
+  position: relative
+  &::before
+    content: ""
+    width: $line_l
+    height: $line_h
+    top: ($circle - $line_h) / 2
+    left: ($circle - $line_l) / 2  
+    position: absolute
+    background: white
+  &::after
+    content: ""
+    width: $line_h
+    height: $line_l
+    top: ($circle - $line_l) / 2
+    left: ($circle - $line_h) / 2  
+    position: absolute
+    background: white
+    transition: all ease 0.2s
+  &.animation
+    &::after
+      transform: rotate(270deg)
 
 
 
